@@ -1,14 +1,14 @@
-def dockeruser = "40404040"
+def dockeruser = "rlcsc"
 def imagename = "ubuntu:16"
 def container = "apache2"
 node {
    echo 'Building Apache Docker Image'
 
 stage('Git Checkout') {
-    git 'https://github.com/jvpreis/ESII'
+    git 'https://github.com/rickicardoso/ESIIT2'
     }
     
-stage('Build Docker Imagae'){
+stage('Build Docker Image'){
      powershell "docker build -t  ${imagename} ."
     }
     
